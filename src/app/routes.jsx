@@ -8,9 +8,15 @@ import { Navigate } from 'react-router-dom';
 import MatxLayout from './components/MatxLayout/MatxLayout';
 import Brands from './pages/Brands/Brands';
 import Categories from './pages/categories/Categories';
+import CategoryDetails from './pages/categories/CategoryDetails';
+import EditCategory from './pages/categories/EditCategory';
+import EditEmployee from './pages/employees/EditEmployee';
+import EmployeeDetails from './pages/employees/EmployeeDetails';
 import Employees from './pages/employees/Employees';
 import Home from './pages/home/Home';
 import MyShop from './pages/myShop/MyShop';
+import EditProducts from './pages/products/EditProducts';
+import ProductDetails from './pages/products/ProductDetails';
 import Products from './pages/products/Products';
 import Services from './pages/services/Services';
 
@@ -25,9 +31,15 @@ const routes = [
     children: [
       { path: '/', element: <Home /> },
       { path: '/products', element: <Products /> },
+      { path: '/products/:productID', element: <ProductDetails /> },
+      { path: '/products/editProduct', element: <EditProducts /> },
       { path: '/brands', element: <Brands /> },
       { path: '/employees', element: <Employees /> },
+      { path: '/employees/:employeeID', element: <EmployeeDetails /> },
+      { path: '/employees/editEmployee', element: <EditEmployee /> },
       { path: '/categories', element: <Categories /> },
+      { path: '/categories/:categoryID', element: <CategoryDetails /> },
+      { path: '/categories/editCategory', element: <EditCategory /> },
       { path: '/services', element: <Services /> },
       { path: '/myShop', element: <MyShop /> },
       { path: '*', element: <NotFound /> },
